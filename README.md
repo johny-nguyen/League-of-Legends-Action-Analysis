@@ -1,5 +1,3 @@
-# League of Legends Action Analysis
-
 
 ## Introduction
 
