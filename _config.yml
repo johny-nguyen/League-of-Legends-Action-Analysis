@@ -3,3 +3,4 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 logo: /images/LoL.png
 title: League of Legends Action Analysis
+description: League of Legends Action Analysis is a DSC project at UCSD that looks at how action-packed tier 1 professional leagues are. This project will go through multiple steps of analysis such as EDA, hypothesis testing, and prediction. 
