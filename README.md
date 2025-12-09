@@ -22,7 +22,7 @@ In this dataset, there are over 100000 rows and 164 columns. For this specific q
 
 ## Data Cleaning and EDA
 ### Data Cleaning
-When it came to cleaning the data, I decided to go with the columns: league, gamelength, dpm, dragons, barons, teamkills, teamdeaths, vspm, and result. When it came to missing values, there were no missing values found in these columns so I was able to leave it alone. However, I made new columns which combined some columns together. For instance, I made a objective column which combined barons and dragons together and a column called kdcombined which summed up the teamkills and teamdeaths together because I believed that combining both the kills and deaths would generate a better action score.
+When it came to cleaning the data, I decided to go with the columns: league, gamelength, dpm, dragons, barons, teamkills, teamdeaths, vspm, and result. When it came to missing values, there were no missing values found in these columns so I was able to leave it alone. However, I made new columns which combined some columns together. For instance, I made a objective column which combined barons and dragons together and a column called kdcombined which summed up the teamkills and teamdeaths together because I believed that combining both the kills and deaths would generate a better action score. Additionally, I also converted my gametime into minutes to make it easier to encode later on. 
 
 Here is the head of the game_summary dataframe:
 
