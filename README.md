@@ -10,8 +10,15 @@ The question I want to try and look at is **Looking at tier-one professional lea
 
 ### Rows and Columns
 In this dataset, there are over 100000 rows and 164 columns. For this specific question, we will only need a fraction of those columns to answer out question. Some of these key columns are:
-
-
+* league: This column distinguishes which league the individual team is from. It will be used when we need to filter which league is tier 1.
+* gamelength: This column determines how long each game took which will be used to help evaluate our "action" score.
+* dpm (damage per minute): This column determines how much damage each team dished out per minute throughout the entire game. DPM is important in determining action-packness because the more damage that is dealt, the more fights there are throughout the game.
+* dragons: This columns determines how many 'dragons' that the team has slain. Dragons are an objective that gives permanent buffs to the team for the remainder of the game. This plays a role in computing action since we have to think about the fights that take place to secure the objective between both teams.
+* barons: This column determines how many 'barons' that the team has slain. Baron is an objective that gives a short buff to your team which includes an increase in damage, recalls, and makes your minions stronger. This objective is usually taken to either extend your lead even further, or it's taken to completely turn the game around.
+* teamkills: This column tracks the total amount of kills each team totalled throughout the entire game.
+* teamdeaths: This column tracks the total amount of deaths each team got during that game.
+* vspm (vision score per minute): Vision score per minute tracks how much vision the team influenced throughout the game. Information is key since most of the map is shrouded in darkness. Being able to place down wards and get information is crucical especially when setting up fights and objectives.
+* result: This column tracks whether the team won or lost which will be used in our classification model.
 
 ## Data Cleaning and EDA
 
