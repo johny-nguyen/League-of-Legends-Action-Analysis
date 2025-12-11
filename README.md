@@ -36,6 +36,8 @@ Here is the head of the game_summary dataframe:
 
 
 ## Assessment of Missingness
+## NMAR Analysis
+One column that I believe is NMAR was the firstbaron column. The reason I believe that it's NMAR is because the game might already be decided long before the baron can actually be spawned or attempted. In this year's 2025 season, the time at which baron would spawn was pushed from 20 minutes to 25 minutes. Even if the baron spawns at 25 minutes, we still also have to consider if they actually attempteed to kill the objective depending on the state of the game. Additional data to attempt to push this to MAR would be the gamelength column which only resolves the first problem of the baron not spawning pre-25 minutes. One proposal I would add on would be to fill in those NaNs with 0's regardless of time since techncially, no team has taken a "first baron" at all.
 
 
 ## Hypothesis Testing
