@@ -19,6 +19,7 @@ In this dataset, there are over 100000 rows and 164 columns. For this specific q
 * teamdeaths: This column tracks the total amount of deaths each team got during that game.
 * vspm (vision score per minute): Vision score per minute tracks how much vision the team influenced throughout the game. Information is key since most of the map is shrouded in darkness. Being able to place down wards and get information is crucical especially when setting up fights and objectives.
 * result: This column tracks whether the team won or lost which will be used in our classification model.
+* participantid: This column tracks the id of each player and allows us to distinguish which person is which. There is also a special value (100 or 200) that gives us the cumulative statistics of each team.
 
 ## Data Cleaning and EDA
 ### Data Cleaning
