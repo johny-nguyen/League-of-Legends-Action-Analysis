@@ -76,6 +76,7 @@ The missiningness I decided to look at was the firstbaron column and I compared 
 For the first column I decided to test, I used gamelength because using prior knowledge, I would assume that the missingness was due to the fact that baron spawns way later into the game and since games might end below that time frame, then that would be a possible reason behind the missingness.
 
 The hypotheses that I tested using a permutation test was:
+
 **Null Hypothesis:** The distribution of gamelength when firstbaron is missing is the same as the distribution of gamelength when firstbaron is not missing
 
 **Alternative Hypothesis:** The distribution of gamelength when firstbaron is missing is the not the same as the distribution of gamelength when firstbaron is not missing
@@ -90,6 +91,7 @@ The test statistic I used when performing this permutation test was difference i
 
 The other column I wanted to track was result. 
 The hypotheses that I tested using a permutation test was:
+
 **Null Hypothesis:** The distribution of result when firstbaron is missing is the same as the distribution of result when firstbaron is not missing
 
 **Alternative Hypothesis:** The distribution of result when firstbaron is missing is the not the same as the distribution of result when firstbaron is not missing
