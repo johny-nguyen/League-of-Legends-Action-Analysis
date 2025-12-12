@@ -106,16 +106,35 @@ For this column, I used TVD as my test statistic and got an observed statistic o
 ></iframe>
 
 ## Hypothesis Testing
-My hypotheses are:
+For my hypothesis test, I wanted to obsserve the two best leagues in the world which are China's LPL and Korea's LCK. The hypothesis test I will be conducting will be looking at the "action-packedness" distribution between the two leagues. The point of this test is to see between which league is the most engaging and exciting to watch. The test statistic I will ultimately be using is the difference in group means with a significance level of 0.05.
+
+**Null Hypothesis**: The action-packedness between the LCK and LPL have the same distribution and the observed difference in action score are due to random chance.
+
+**Alternative Hypothesis**: The LCK has lower action-packedness than LPL on average. The observed difference cannot be explained by random chance alone.
+
+When defining action-packedness, I decided to create a metric called "action-score" which consists of a combination of different columns from the game_summary data. I decided the weights on what I deemed as most important. The columns include: gamelength, kdcombined, obj, dpm, and vspm. To calculate my action-score, I also standardized the other columns to bring all the aforementioned metrics to the same scale. 
+
+The Observed statistic that I got was ~6.79 and the p-value that I got was 0.038. This means that I reject the null hypothesis, indicating that there is some significant evidence to show that LCK may have a lower action-packedness compared to the LPL.
+
+<iframe
+  src="assets/LCK vs LPL.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 
 ## Framing a Prediction Problem
-
+Based on my action-based metrics from past sections, I wanted to see whether I can predict if a team will win or lose a match given those parameters. This prediction task will be a binary classification task where my true labels will be based on the column `results`. The metric I'll use will be accuracy because the data is roughly balanced as there are no ties meaning the outcomes are 50/50.
 
 ## Baseline Model
-
+For my baseline model, I went with a Decision Tree classifier where I used the initial columns 'teamkills', 'teamdeaths', 'obj', and 'dpm' which are all qualitative columns. The train/test split I decided to use was an 80%/20% split. I also trained the model with a max_depth of 6 where I got a training accuracy of 0.974 and a test accuracy of 0.9537 which is a very high baseline. As a baseline model, I think it's already very strong and could pass as a final model. 
 
 ## Final Model
+For my final model, I added the other action-score metrics such as 'gamelength_to_minutes' and 'vspm' and decided to change my Decision Tree into a Random Forest. I chose these two features to add on to my final model since it was only normal to use all of my features that I used to calculate my action score to find the end result. Additionally, for my 'vspm' after analyzing it in my previous bivariate analysis, I felt it was a good metric to put on since the higher the vision score meant the higher chance of winning. I also used GridSearchCV to find my most optimal parameters and was able to conclude that the best hyperparameters include a max_depth of 10, and n_estimators of 500.
 
+The final score that I got was 0.9612 for my testing accuracy which is a small improvement from the baseline model, but my training accuracy was able to spike to 0.997 which is very close to perfect.
+
+Here is a confusion matrix that evaluated my model's performance. 
 
 ## Fairness Model
