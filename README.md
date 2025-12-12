@@ -36,6 +36,12 @@ Here is the head of the game_summary dataframe:
 |         3 |        0 |         2014 |          18 |           22 | LPL      |             100 | 2824.38 | 9.5929 |        0 |     3 |           40 |           1 |                      20 |
 
 ### Univariate Analysis
+<iframe
+  src="assets/Univariate Graph (Teamkills).html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ### Bivariate Analysis
 
