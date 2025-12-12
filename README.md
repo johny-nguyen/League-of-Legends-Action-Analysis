@@ -27,7 +27,7 @@ When it came to cleaning the data, I decided to go with the columns: league, gam
 
 Here is the head of the game_summary dataframe:
 
-|   dragons |   barons |   gamelength |   teamkills |   teamdeaths | league   |   participantid |     dpm |   vspm |   result |   obj |   kdcombined |   num_games |   gamelength_to_minutes |
+|   dragons |   barons |   gamelength |   teamkills |   teamdeaths | league   |   participantid |     dpm |   vspm |   result |   obj | kdcombined |   num_games |   gamelength_to_minutes |
 |----------:|---------:|-------------:|------------:|-------------:|:---------|----------------:|--------:|-------:|---------:|------:|-------------:|------------:|------------------------:|
 |         4 |        1 |         2123 |          17 |            5 | LPL      |             100 | 2241.45 | 9.3547 |        1 |     5 |           22 |           1 |                      21 |
 |         1 |        0 |         2123 |           5 |           17 | LPL      |             200 | 2118.68 | 7.9416 |        0 |     1 |           22 |           1 |                      21 |
