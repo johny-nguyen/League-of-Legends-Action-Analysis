@@ -137,4 +137,29 @@ The final score that I got was 0.9612 for my testing accuracy which is a small i
 
 Here is a confusion matrix that evaluated my model's performance. 
 
+<iframe
+  src="assets/CM.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+
+I think when it comes to the falsely classified cases, we also have to consider games where teams comeback despite being down on things such as kills and objectives because anything is possible when it comes to League of Legends matches.
+
+
 ## Fairness Model
+
+When making my fairness analysis, I wanted to answer the question "Does my model perform worse for games that last less than or equal to 25 minutes than it does for games that last over 25 minutes. I chose this metric because 25 minutes is typically when baron spawns. With this thinking in mind I wanted to see whether this objective will cause my model to perform better or worse.
+
+The evaluation metric I decided to use was accuracy and I decided to use a 0.05 significance level. 
+
+My hypotheses are:
+
+**Null Hypothesis:** Our Model is fair. Its accuracy for games that last 25 minutes or less and games that last over 25 minutes are roughly the same, and any differences are due to random chance.
+
+**Alternative Hypothesis:** Our model is unfair. Its accuracy between games that last 25 minutes or less is lower than its accuracy for games that last over 25 minutes
+
+
+The p-value that I got was 0.99 which means we fail to reject the null hypothesis. This means that our model fairly predicts accuracy between games that last 25 minutes or less and games that last over 25 minutes.
+
