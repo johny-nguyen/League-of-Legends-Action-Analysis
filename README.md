@@ -43,6 +43,7 @@ Here is the head of the game_summary dataframe:
   frameborder="0"
 ></iframe>
 
+For my univariate analysis, I created a collection of plots which observed the distribution of teamkills for the different Tier 1 professional leagues. Looking at the distribution of teamkills in each plot, they seem to follow an rough bimodal distribution amongst all leagues. They tend to vary around 5-10 kills and 15-20 kills.
 ### Bivariate Analysis
 
 
