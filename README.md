@@ -95,6 +95,7 @@ The hypotheses that I tested using a permutation test was:
 **Null Hypothesis:** The distribution of result when firstbaron is missing is the same as the distribution of result when firstbaron is not missing
 
 **Alternative Hypothesis:** The distribution of result when firstbaron is missing is the not the same as the distribution of result when firstbaron is not missing
+
 For this column, I used TVD as my test statistic and got an observed statistic of 1.0 and a p-value of 1. With this conclusion, we fail to reject the null hypothesis meaning that our firstbaron missingness does not depend on result. Down below is the empirical distribution for this permutation test. 
 
 <iframe
