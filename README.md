@@ -27,8 +27,13 @@ When it came to cleaning the data, I decided to go with the columns: league, gam
 
 Here is the head of the game_summary dataframe:
 
-[INSERT DATAFRAME]
-
+|   dragons |   barons |   gamelength |   teamkills |   teamdeaths | league   |   participantid |     dpm |   vspm |   result |   obj |   kdcombined |   num_games |   gamelength_to_minutes |
+|----------:|---------:|-------------:|------------:|-------------:|:---------|----------------:|--------:|-------:|---------:|------:|-------------:|------------:|------------------------:|
+|         4 |        1 |         2123 |          17 |            5 | LPL      |             100 | 2241.45 | 9.3547 |        1 |     5 |           22 |           1 |                      21 |
+|         1 |        0 |         2123 |           5 |           17 | LPL      |             200 | 2118.68 | 7.9416 |        0 |     1 |           22 |           1 |                      21 |
+|         2 |        0 |         1952 |          11 |           18 | LPL      |             100 | 2290.76 | 7.1926 |        0 |     2 |           29 |           1 |                      19 |
+|         2 |        1 |         1952 |          18 |           11 | LPL      |             200 | 2767.19 | 8.3299 |        1 |     3 |           29 |           1 |                      19 |
+|         3 |        0 |         2014 |          18 |           22 | LPL      |             100 | 2824.38 | 9.5929 |        0 |     3 |           40 |           1 |                      20 |
 
 ### Univariate Analysis
 
