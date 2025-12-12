@@ -72,7 +72,35 @@ Some notable things that I found from this aggregate was that the LTA has more d
 One column that I believe is NMAR was the firstbaron column. The reason I believe that it's NMAR is because the game might already be decided long before the baron can actually be spawned or attempted. In this year's 2025 season, the time at which baron would spawn was pushed from 20 minutes to 25 minutes. Even if the baron spawns at 25 minutes, we still also have to consider if they actually attempteed to kill the objective depending on the state of the game. Additional data to attempt to push this to MAR would be the gamelength column which only resolves the first problem of the baron not spawning pre-25 minutes. One proposal I would add on would be to fill in those NaNs with 0's regardless of time since techncially, no team has taken a "first baron" at all.
 
 ### Missingness Dependency
+The missiningness I decided to look at was the firstbaron column and I compared it to gamelength and result and tested it under a 0.05 significance level. 
+For the first column I decided to test, I used gamelength because using prior knowledge, I would assume that the missingness was due to the fact that baron spawns way later into the game and since games might end below that time frame, then that would be a possible reason behind the missingness.
 
+The hypotheses that I tested using a permutation test was:
+**Null Hypothesis:** The distribution of gamelength when firstbaron is missing is the same as the distribution of gamelength when firstbaron is not missing
+
+**Alternative Hypothesis:** The distribution of gamelength when firstbaron is missing is the not the same as the distribution of gamelength when firstbaron is not missing
+
+The test statistic I used when performing this permutation test was difference in group means and had an observed statistic of 0.0259 with a p-value of 0.146. Since our significance level is 0.05, we fail to reject the null hypothesis meaning that our firstbaron missingness does not depend on gamelength. Down below is my empirical distribution for this permutation test.
+<iframe
+  src="assets/fbaron vs gamelength.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+The other column I wanted to track was result. 
+The hypotheses that I tested using a permutation test was:
+**Null Hypothesis:** The distribution of result when firstbaron is missing is the same as the distribution of result when firstbaron is not missing
+
+**Alternative Hypothesis:** The distribution of result when firstbaron is missing is the not the same as the distribution of result when firstbaron is not missing
+For this column, I used TVD as my test statistic and got an observed statistic of 1.0 and a p-value of 1. With this conclusion, we fail to reject the null hypothesis meaning that our firstbaron missingness does not depend on result. Down below is the empirical distribution for this permutation test. 
+
+<iframe
+  src="assets/fbaron vs result.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ## Hypothesis Testing
 My hypotheses are:
