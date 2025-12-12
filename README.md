@@ -56,6 +56,7 @@ For my bivariate analysis, I looked vision score per minute which is one of my a
 
 ### Interesting Aggregates
 An interesting aggregate that I performed on my data was looking at the mean() and sum() of each league. The aggregate below depicts the mean() values of the games found in different Tier 1 leagues
+
 | league   |   participantid |   gamelength |     dpm |   dragons |   barons |   teamkills |   teamdeaths |    vspm |   result |     obj |   kdcombined |   num_games |   gamelength_to_minutes |
 |:---------|----------------:|-------------:|--------:|----------:|---------:|------------:|-------------:|--------:|---------:|--------:|-------------:|------------:|------------------------:|
 | LCK      |             150 |      1935.74 | 2635.31 |   2.2036  | 0.524324 |     14.4045 |      14.4315 | 8.46914 |      0.5 | 2.72793 |      28.836  |           1 |                 18.8721 |
