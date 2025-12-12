@@ -43,15 +43,39 @@ Here is the head of the game_summary dataframe:
   frameborder="0"
 ></iframe>
 
+For my univariate analysis, I created a collection of plots which observed the distribution of teamkills for the different Tier 1 professional leagues. Looking at the distribution of teamkills in each plot, they seem to follow an rough bimodal distribution amongst all leagues. They tend to vary around 5-10 kills and 15-20 kills.
 ### Bivariate Analysis
+<iframe
+  src="assets/Bivariate VSPM vs Result.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
+For my bivariate analysis, I looked vision score per minute which is one of my action score parameters and compared that to result using a boxplot. The plot shows that the vision score per minute is much higher in terms of its lower and upper bound for the winning team compared to the losing team. 
+
+### Interesting Aggregates
+An interesting aggregate that I performed on my data was looking at the mean() and sum() of each league. The aggregate below depicts the mean() values of the games found in different Tier 1 leagues
+
+| league   |   participantid |   gamelength |     dpm |   dragons |   barons |   teamkills |   teamdeaths |    vspm |   result |     obj |   kdcombined |   num_games |   gamelength_to_minutes |
+|:---------|----------------:|-------------:|--------:|----------:|---------:|------------:|-------------:|--------:|---------:|--------:|-------------:|------------:|------------------------:|
+| LCK      |             150 |      1935.74 | 2635.31 |   2.2036  | 0.524324 |     14.4045 |      14.4315 | 8.46914 |      0.5 | 2.72793 |      28.836  |           1 |                 18.8721 |
+| LCP      |             150 |      1938.56 | 2562.58 |   2.19931 | 0.517182 |     13.9227 |      13.9467 | 8.31289 |      0.5 | 2.71649 |      27.8694 |           1 |                 18.9038 |
+| LEC      |             150 |      2015.48 | 2540.96 |   2.38889 | 0.620915 |     13.5425 |      13.567  | 8.36914 |      0.5 | 3.0098  |      27.1095 |           1 |                 19.6797 |
+| LPL      |             150 |      1948.12 | 2637.98 |   2.20807 | 0.53913  |     15.0447 |      15.0702 | 8.41569 |      0.5 | 2.7472  |      30.1149 |           1 |                 18.9764 |
+| LTA      |             150 |      1993    | 2705.57 |   2.2125  | 0.5375   |     14.9875 |      14.9875 | 8.15228 |      0.5 | 2.75    |      29.975  |           1 |                 19.35   |
+
+Some notable things that I found from this aggregate was that the LTA has more damage per minute compared to the rest of the leagues, but has the least games out of everyone else when looking at the aggregate dataframe using sum(). Additionally, I found that on average, the LPL typically has more kills and deaths combined compareed to the rest of the other leagues which might be an indicator or more aggression.
 
 ## Assessment of Missingness
-## NMAR Analysis
+### NMAR Analysis
 One column that I believe is NMAR was the firstbaron column. The reason I believe that it's NMAR is because the game might already be decided long before the baron can actually be spawned or attempted. In this year's 2025 season, the time at which baron would spawn was pushed from 20 minutes to 25 minutes. Even if the baron spawns at 25 minutes, we still also have to consider if they actually attempteed to kill the objective depending on the state of the game. Additional data to attempt to push this to MAR would be the gamelength column which only resolves the first problem of the baron not spawning pre-25 minutes. One proposal I would add on would be to fill in those NaNs with 0's regardless of time since techncially, no team has taken a "first baron" at all.
+
+### Missingness Dependency
 
 
 ## Hypothesis Testing
+My hypotheses are:
 
 
 ## Framing a Prediction Problem
